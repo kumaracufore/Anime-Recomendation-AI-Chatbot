@@ -1,0 +1,10 @@
+Attack on Titan|Action,Dark Fantasy,Post-Apocalyptic|A dark fantasy series where humanity fights against giant humanoid creatures called Titans.
+Death Note|Psychological Thriller,Mystery,Supernatural|A high school student discovers a supernatural notebook that allows him to kill anyone by writing their name in it.
+My Hero Academia|Action,Superhero,School|In a world where most people have superpowers, a boy born without them strives to become the greatest hero.
+Demon Slayer|Action,Supernatural,Historical|A young boy becomes a demon slayer after his family is slaughtered and his sister turned into a demon.
+One Punch Man|Action,Comedy,Superhero|A hero who can defeat any opponent with a single punch seeks meaning in life while dealing with mundane problems.
+Steins;Gate|Sci-Fi,Thriller,Drama|A self-proclaimed mad scientist discovers a way to send messages to the past, leading to dire consequences.
+Your Name|Romance,Supernatural,Drama|Two teenagers mysteriously swap bodies and must find each other across time and space.
+Fullmetal Alchemist: Brotherhood|Action,Adventure,Fantasy|Two brothers use alchemy in their quest to restore their bodies after a failed attempt to resurrect their mother.
+Violet Evergarden|Drama,Fantasy,Slice of Life|A former soldier learns to understand human emotions while working as an Auto Memory Doll.
+Cowboy Bebop|Sci-Fi,Neo-Noir,Space Western|A group of bounty hunters travels through space, each dealing with their dark past. 
