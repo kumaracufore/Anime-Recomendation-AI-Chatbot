@@ -77,8 +77,19 @@ const POPULARITY_KEYWORDS = [
 ];
 
 const HUGGING_FACE_MODEL = "microsoft/bitnet-b1.58-2B-4T";
-const API_KEY = "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";
-const TENOR_API_KEY = "LIVDSRZULELA"; // This is a public test key, replace with your own if needed
+const API_KEY = import.meta.env.VITE_HUGGING_FACE_API_KEY;
+const TENOR_API_KEY = import.meta.env.VITE_TENOR_API_KEY;
+
+// Add error handling for missing API keys
+if (!API_KEY) {
+  console.error(
+    "Missing Hugging Face API key. Please set VITE_HUGGING_FACE_API_KEY in your environment variables."
+  );
+}
+
+if (!TENOR_API_KEY) {
+  console.warn("Missing Tenor API key. GIF functionality will be limited.");
+}
 
 const SYSTEM_PROMPT = `You are an anime recommendation chatbot. Your task is to provide friendly, engaging responses about anime recommendations. Keep responses concise and natural. Include a brief explanation of why each anime might appeal to the user based on their query.`;
 
@@ -612,7 +623,16 @@ const ChatBot = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 800, margin: "auto", mt: 4, p: 2 }}>
+    <Box
+      className="content-container"
+      sx={{
+        maxWidth: "810px",
+        margin: "auto",
+        mt: 4,
+        p: 2,
+        width: "100%",
+      }}
+    >
       <Paper
         elevation={5}
         sx={{

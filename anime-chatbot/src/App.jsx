@@ -8,69 +8,48 @@ import {
   IconButton,
   ThemeProvider,
   createTheme,
+  CssBaseline,
 } from "@mui/material";
 import BugReportIcon from "@mui/icons-material/BugReport";
 import HomeIcon from "@mui/icons-material/Home";
 import ChatBot from "./components/ChatBot";
 import ErrorLog from "./components/ErrorLog";
+import VideoBackground from "./components/VideoBackground";
 import "./App.css";
 
-const theme = createTheme({
+const darkTheme = createTheme({
   palette: {
+    mode: "dark",
     primary: {
-      main: "#FF6B6B", // Anime-inspired pink-red
-      light: "#FF8E8E",
-      dark: "#FF4848",
+      main: "#4A90E2",
     },
     secondary: {
-      main: "#4A90E2", // Bright blue often used in anime
-      light: "#6AA9E9",
-      dark: "#2A77D9",
+      main: "#FF6B6B",
     },
     background: {
-      default: "#1A1A2E", // Dark blue background
-      paper: "#262640",
-    },
-    text: {
-      primary: "#FFFFFF",
-      secondary: "#B8B8B8",
+      default: "transparent",
+      paper: "rgba(38, 38, 64, 0.9)",
     },
   },
   typography: {
-    fontFamily: "'Poppins', 'Roboto', sans-serif",
-    h4: {
-      fontWeight: 600,
-      background: "linear-gradient(45deg, #FF6B6B 30%, #4A90E2 90%)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-    },
+    fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial", sans-serif',
   },
   components: {
-    MuiButton: {
+    MuiAppBar: {
       styleOverrides: {
-        contained: {
-          background: "linear-gradient(45deg, #FF6B6B 30%, #4A90E2 90%)",
-          color: "white",
-          "&:hover": {
-            background: "linear-gradient(45deg, #FF4848 30%, #2A77D9 90%)",
-          },
+        root: {
+          background: "rgba(26, 26, 46, 0.8)",
+          backdropFilter: "blur(10px)",
+          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
         },
       },
     },
-    MuiTextField: {
+    MuiPaper: {
       styleOverrides: {
         root: {
-          "& .MuiOutlinedInput-root": {
-            color: "white",
-            "& fieldset": {
-              borderColor: "#4A90E2",
-            },
-            "&:hover fieldset": {
-              borderColor: "#FF6B6B",
-            },
-            "&.Mui-focused fieldset": {
-              borderColor: "#FF6B6B",
-            },
+          backdropFilter: "blur(10px)",
+          "&.MuiAppBar-root": {
+            backdropFilter: "blur(10px)",
           },
         },
       },
@@ -80,27 +59,11 @@ const theme = createTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <VideoBackground />
       <Router>
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static" sx={{ bgcolor: "#1A1A2E" }}>
-            <Toolbar>
-              <IconButton component={Link} to="/" sx={{ color: "#fff", mr: 2 }}>
-                <HomeIcon />
-              </IconButton>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Anime Recommendation ChatBot
-              </Typography>
-              <IconButton
-                component={Link}
-                to="/error-log"
-                sx={{ color: "#FF6B6B" }}
-              >
-                <BugReportIcon />
-              </IconButton>
-            </Toolbar>
-          </AppBar>
-
           <Routes>
             <Route path="/" element={<ChatBot />} />
             <Route path="/error-log" element={<ErrorLog />} />
