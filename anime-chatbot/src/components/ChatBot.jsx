@@ -134,8 +134,8 @@ const ChatBot = () => {
   useEffect(() => {
     // Load both data sources
     Promise.all([
-      fetch("/src/data/anime.csv").then((response) => response.text()),
-      fetch("/src/data/anime_data.txt").then((response) => response.text()),
+      fetch("/data/anime.csv").then((response) => response.text()),
+      fetch("/data/anime_data.txt").then((response) => response.text()),
     ])
       .then(([csvData, txtData]) => {
         // Parse CSV data with error handling
