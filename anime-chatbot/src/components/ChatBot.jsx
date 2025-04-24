@@ -141,7 +141,7 @@ const ChatBot = () => {
         // Parse CSV data with error handling
         const csvLines = csvData.split("\n").slice(1);
         const csvAnimes = csvLines
-          .filter((line) => line.trim()) // Remove empty lines
+          .filter((line) => line.trim())
           .map((line) => {
             try {
               const [anime_id, name, genre, type, episodes, rating, members] =
@@ -170,12 +170,12 @@ const ChatBot = () => {
               return null;
             }
           })
-          .filter(Boolean); // Remove any null entries from parsing errors
+          .filter(Boolean);
 
         // Parse TXT data with error handling
         const txtAnimes = txtData
           .split("\n")
-          .filter((line) => line.trim()) // Remove empty lines
+          .filter((line) => line.trim())
           .map((line) => {
             try {
               const [title, genres, description] = line
@@ -194,7 +194,7 @@ const ChatBot = () => {
               return null;
             }
           })
-          .filter(Boolean); // Remove any null entries from parsing errors
+          .filter(Boolean);
 
         setAnimeData([...csvAnimes, ...txtAnimes]);
 
@@ -372,7 +372,6 @@ const ChatBot = () => {
 
     // If no results found, try a more lenient search
     if (recommendations.length === 0) {
-      // Try matching just the genres
       const genreMatches = animeData
         .map((anime) => ({
           ...anime,
