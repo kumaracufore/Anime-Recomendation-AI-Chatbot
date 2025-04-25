@@ -1,5 +1,4 @@
 {
-  "rewrites": [{ "source": "/((?!/(static|media)).)*", "destination": "/" }],
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite"
