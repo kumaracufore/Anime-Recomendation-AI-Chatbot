@@ -1,11 +1,11 @@
 {
-  "name": "anime-chatbot",
+  "name": "reference-ai-chatbot",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "start": "vite preview"
   },
@@ -20,12 +20,12 @@
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",
     "react-router-dom": "^6.11.1",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^3.0.1",
+    "vite": "^4.3.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "vite": "^5.0.0"
+    "@types/react-dom": "^18.2.0"
   },
   "engines": {
     "node": ">=14.0.0"

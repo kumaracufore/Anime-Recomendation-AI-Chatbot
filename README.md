@@ -19,11 +19,9 @@ A React-based chatbot that helps users discover anime based on their preferences
 
 1. Clone the repository
 2. Navigate to the project directory:
-
-```bash
-cd anime-chatbot
-```
-
+   ```bash
+   cd anime-recommendation-chatbot
+   ```
 3. Install dependencies:
 
 ```bash

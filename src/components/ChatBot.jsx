@@ -868,7 +868,6 @@ const ChatBot = () => {
           </Box>
         </Box>
 
-        {/* Add loading indicator */}
         {isModelLoading && (
           <Box sx={{ display: "flex", justifyContent: "center", my: 2 }}>
             <CircularProgress size={24} sx={{ color: "#4A90E2" }} />
