@@ -1,68 +1,88 @@
 # Anime Recommendation Chatbot
 
-A React-based chatbot that helps users discover anime based on their preferences and interests. The chatbot uses a curated database of anime titles and provides recommendations based on genres and descriptions.
+An interactive chatbot that provides personalized anime recommendations based on user preferences.
 
 ## Features
 
-- Interactive chat interface
-- Genre-based anime recommendations
-- Modern Material-UI design
-- Responsive layout
-- Simple and intuitive user experience
+- 🎭 Genre-based recommendations
+- 📺 Type filtering (TV, Movie, OVA)
+- ⭐ Rating-based sorting
+- 👥 Popularity metrics
+- 💬 Natural language interaction
+- 🖼️ Anime GIF previews
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
-- npm (v6 or higher)
+- Node.js >= 14.0.0
+- npm or yarn
+
+## Environment Variables
+
+Create a `.env` file in the root directory with:
+
+```env
+VITE_HUGGING_FACE_API_KEY=your_huggingface_api_key
+VITE_TENOR_API_KEY=your_tenor_api_key
+```
 
 ## Installation
 
-1. Clone the repository
-2. Navigate to the project directory:
-   ```bash
-   cd anime-recommendation-chatbot
-   ```
-3. Install dependencies:
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/anime-chatbot.git
+cd anime-chatbot
+```
+
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-## Running the Application
-
-To start the development server:
+3. Start development server:
 
 ```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`
+4. Build for production:
 
-## Usage
+```bash
+npm run build
+```
 
-1. Type your anime preferences in the chat input
-2. You can mention genres (e.g., "action", "romance", "comedy")
-3. The chatbot will recommend anime based on your interests
-4. Press Enter or click the Send button to get recommendations
+## Project Structure
 
-## Available Genres
+```
+anime-chatbot/
+├── public/
+│   └── data/
+│       ├── anime.csv
+│       └── anime_data.txt
+├── src/
+│   ├── components/
+│   │   ├── ChatBot.jsx
+│   │   └── ChatBot.css
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── vite.config.js
+```
 
-- Action
-- Adventure
-- Comedy
-- Drama
-- Fantasy
-- Mystery
-- Romance
-- Sci-Fi
-- Slice of Life
-- Supernatural
-- Thriller
-- And more...
+## Deployment
 
-## Technologies Used
+This project is configured for deployment on Vercel. The `vercel.json` file includes all necessary settings for proper routing and static file serving.
 
-- React 17
-- Vite
-- Material-UI
-- HuggingFace Inference API
+### Vercel Setup
+
+1. Import your repository to Vercel
+2. Set the following in your Vercel project settings:
+   - Framework Preset: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+3. Add your environment variables in the Vercel project settings
+
+## License
+
+MIT
