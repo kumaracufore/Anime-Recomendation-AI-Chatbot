@@ -134,8 +134,18 @@ const ChatBot = () => {
   useEffect(() => {
     // Load both data sources
     Promise.all([
-      fetch("/data/anime.csv").then((response) => response.text()),
-      fetch("/data/anime_data.txt").then((response) => response.text()),
+      fetch("/data/anime.csv").then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+      }),
+      fetch("/data/anime_data.txt").then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+      }),
     ])
       .then(([csvData, txtData]) => {
         // Parse CSV data with error handling
